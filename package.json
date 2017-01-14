@@ -2,8 +2,9 @@
   "name": "preact-environment",
   "version": "1.0.0",
   "description": "An environment to test Preact",
-  "main": "index.js",
+  "main": "app/app.js",
   "scripts": {
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,5 +19,15 @@
   "bugs": {
     "url": "https://github.com/lawoollett/PreactEnvironment/issues"
   },
-  "homepage": "https://github.com/lawoollett/PreactEnvironment#readme"
+  "homepage": "https://github.com/lawoollett/PreactEnvironment#readme",
+  "dependencies": {
+    "preact": "^7.1.0",
+    "webpack": "^2.2.0-rc.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-plugin-transform-react-jsx": "^6.8.0",
+    "babel-preset-env": "^1.1.8"
+  }
 }
