@@ -1,0 +1,22 @@
+{
+  "name": "preact-environment",
+  "version": "1.0.0",
+  "description": "An environment to test Preact",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lawoollett/PreactEnvironment.git"
+  },
+  "keywords": [
+    "Preact"
+  ],
+  "author": "lawoollett",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lawoollett/PreactEnvironment/issues"
+  },
+  "homepage": "https://github.com/lawoollett/PreactEnvironment#readme"
+}
