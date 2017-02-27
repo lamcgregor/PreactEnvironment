@@ -1,0 +1,36 @@
+#stars-frame .glyphicon {
+	margin: 0.3em;
+	font-size: 1.75em;
+}
+
+#stars-frame,
+#answer-frame {
+	float: left;
+	width: 40%;
+}
+#button-frame {
+	float: left;
+	width: 20%;
+	text-align: center;
+	margin-top: 70px;
+}
+
+#stars-frame .well,
+#answer-frame .well {
+	height: 200px;
+}
+
+.number {
+	border-radius: 50%;
+	display: inline-block;
+	margin: 0.5em;
+	background-color: #bbb;
+	width: 30px;
+	font-size: 22px;
+	text-align: center;
+	cursor: pointer;
+}
+.number.true {
+	opacity: 0.4;
+	cursor: not-allowed;
+}
