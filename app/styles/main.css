@@ -30,7 +30,13 @@
 	text-align: center;
 	cursor: pointer;
 }
-.number.true {
+.number.selected-true {
 	opacity: 0.4;
+	cursor: not-allowed;
+}
+
+.number.used-true {
+	background-color: #aaddaa;
+	color: #99bb99;
 	cursor: not-allowed;
 }
