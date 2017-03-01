@@ -133,19 +133,24 @@ class Game extends Component {
 			correct: null,
 			reDraws: 5,
 			usedNumbers: [],
-			doneStatus: 'Just a test'
+			doneStatus: null
 		}
-		this.baseState = this.state;
 	}
 	resetGame() {
-		console.log(this.baseState);
-		this.setState(this.baseState)
+		this.setState({
+			selectedNumbers: [],
+			numberOfStars: this.randomNumber(),
+			correct: null,
+			reDraws: 5,
+			usedNumbers: [],
+			doneStatus: null
+		})
 	}
 	randomNumber() {
 		return Math.floor(Math.random() * 9) + 1
 	}
 	clickNumber(number) {
-		if(this.state.selectedNumbers.indexOf(number) < 0) {
+		if(this.state.selectedNumbers.indexOf(number) < 0 && this.state.usedNumbers.indexOf(number) < 0) {
 			this.setState({
 				selectedNumbers: this.state.selectedNumbers.concat(number),
 				correct: null
@@ -182,7 +187,7 @@ class Game extends Component {
 			usedNumbers: usedNumbers,
 			correct: null,
 			numberOfStars: this.randomNumber()
-		},() => {
+		},function() {
 			this.updateDoneStatus()
 		})
 	}
@@ -193,6 +198,8 @@ class Game extends Component {
 				correct: null,
 				numberOfStars: this.randomNumber(),
 				reDraws: this.state.reDraws - 1
+			},function() {
+				this.updateDoneStatus()
 			})
 		}
 	}
